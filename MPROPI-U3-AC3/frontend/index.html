@@ -1,15 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión</title>
+</head>
 <body>
-  <h2>Login</h2>
+  <main>
+    <h2>Login</h2>
 
-  <input id="email" placeholder="Email" />
-  <input id="password" type="password" placeholder="Password" />
+    <div>
+      <label for="email">Email <span aria-hidden="true" title="Obligatorio">*</span></label>
+      <br>
+      <input 
+        id="email" 
+        type="email" 
+        placeholder="ejemplo@correo.com" 
+        autocomplete="email" 
+        required 
+        aria-required="true" 
+      />
+    </div>
+    
+    <br>
 
-  <button id="loginBtn">Login</button>
+    <div>
+      <label for="password">Contraseña <span aria-hidden="true" title="Obligatorio">*</span></label>
+      <br>
+      <input 
+        id="password" 
+        type="password" 
+        placeholder="Tu contraseña" 
+        autocomplete="current-password" 
+        required 
+        aria-required="true" 
+      />
+    </div>
 
-  <p id="message"></p>
+    <br>
 
-  <script src="app.js"></script>
+    <button id="loginBtn" type="button">Login</button>
+
+    <!-- Usamos aria-live="polite" para que los lectores de pantalla lean el mensaje de error o éxito al actualizarse -->
+    <p id="message" role="status" aria-live="polite"></p>
+  </main>
+
+  <script type="module">
+    import { initApp } from './app.js'
+    initApp()
+  </script>
 </body>
 </html>

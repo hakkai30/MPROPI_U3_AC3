@@ -1,0 +1,32 @@
+{
+  "name": "mpropi_u3_ac3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:e2e": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hakkai30/MPROPI_U3_AC3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hakkai30/MPROPI_U3_AC3/issues"
+  },
+  "homepage": "https://github.com/hakkai30/MPROPI_U3_AC3#readme",
+  "description": "",
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/user-event": "^14.6.1",
+    "jsdom": "^29.1.0",
+    "playwright": "^1.59.1",
+    "vitest": "^4.1.5"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
